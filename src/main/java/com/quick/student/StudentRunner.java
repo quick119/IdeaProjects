@@ -1,4 +1,4 @@
-package com.quick;
+package com.quick.student;
 
 public class StudentRunner {
     public static void main(String[] args) {

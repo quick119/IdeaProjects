@@ -1,4 +1,4 @@
-package com.quick;
+package com.quick.student;
 
 public class Student {
     String name;
@@ -16,7 +16,8 @@ public class Student {
     }
 
     public void print() {
-        System.out.println(name + "\t" + english + "\t" + math);
+        System.out.println(name + "\t" + english + "\t" + math +
+                "\t" + (english+math)/2);
     }
 
 }
