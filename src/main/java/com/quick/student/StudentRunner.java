@@ -4,6 +4,13 @@ import java.util.Scanner;
 
 public class StudentRunner {
     public static void main(String[] args) {
+//        userInput();
+        StudentJ stu = new StudentJ("Hank", 77, 99);
+        stu.print();
+        System.out.println("High score: " + stu.highest());
+    }
+
+    private static void userInput() {
         System.out.print("Please enter student's name: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.next();
@@ -13,6 +20,6 @@ public class StudentRunner {
         int math = scanner.nextInt();
         StudentJ stu = new StudentJ(name, english, math);
         stu.print();
-        System.out.println("High score:" + stu.highest());
+        System.out.println("High score: " + stu.highest());
     }
 }
