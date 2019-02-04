@@ -4,7 +4,7 @@ import java.util.*
 
 fun main() {
 //    userInput()
-    val stu = Student("Hank", 77, 99)
+    val stu = Student("Hank", 60, 99)
     stu.print()
     val test = 123
     println("Test is : $test")
@@ -13,28 +13,28 @@ fun main() {
 
 class Student(var name: String?, var english: Int, var math: Int) {
     fun print() {
-        println(name + "\t" + english + "\t" + math +
-                "\t" + getAverage() + "\t" +
-                if(getAverage() >= 60) "PASS" else "FAILED")
-    }
-    fun getAverage() :Int {
-        return (english+math)/2
+        println("$name\t$english\t$math\t${getAverage()}\t${passOrFailed()}\t${grading()}")
     }
 
-    fun highest() : Int {
-        var max = if (english > math) {     //if判斷式可以放在等號的右邊
-            println("english")
-            english
-        }else {
-            println("math")
-            math
-        }
-        /*if (english > math) {
-            max = english
-        }else{
-            max = math
-        }*/
-        return max
+    fun grading() = when(getAverage()) {
+        in 90..100 -> 'A'
+        in 80..89 -> 'B'
+        in 70..79 -> 'C'
+        in 60..69 -> 'D'
+        else -> 'F'
+    }
+
+    fun passOrFailed() =
+            if(getAverage() >= 60) "PASS" else "FAILED"
+
+    fun getAverage() = (english+math)/2
+
+    fun highest() = if (english > math) {     //if判斷式可以放在等號的右邊
+        println("english")
+        english
+    }else {
+        println("math")
+        math
     }
 
     fun nameCheck() {
