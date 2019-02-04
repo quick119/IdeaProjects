@@ -55,8 +55,6 @@ public class StudentJ {
         }*/
     }
 
-    public int  getAverage() {
-        return (english+math)/2;
-    }
+    public int  getAverage() { return (english+math)/2; }
 
 }
