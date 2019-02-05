@@ -1,12 +1,12 @@
 package com.quick.student;
 
-public class StudentJ {
+public class Student {
     String name;
     int english;
     int math;
     static int pass = 60;
 
-    public StudentJ(String name, int english, int math) {
+    public Student(String name, int english, int math) {
         this.name = name;
         this.english = english;
         this.math = math;
@@ -39,6 +39,7 @@ public class StudentJ {
             default:
                 grading = 'F';
         }
+        System.out.println("\t" + grading);
         /*if (average >= 90 && average <= 100) {
             grading = 'A';
         } else if (average >= 80 && average <= 89) {
@@ -48,7 +49,7 @@ public class StudentJ {
         } else if (average >= 60 && average <= 69) {
             grading = 'D';
         }*/
-        System.out.println("\t" + grading);
+
         /*if (getAverage() >= 60) {
             System.out.println("\tPASS");
         }else{
