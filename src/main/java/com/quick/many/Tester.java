@@ -1,11 +1,38 @@
 package com.quick.many;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Tester {
     public static void main(String[] args) {
+        HashMap<String, String> stock =
+                new HashMap<>();
+        stock.put("2330", "台積電");
+        stock.put("2317", "鴻海");
+        stock.put("2330", "TSMC");  //被蓋掉
+        System.out.println(stock.get("2330"));
+        System.out.println(stock);
+        for (String key : stock.keySet()) {
+            System.out.println(stock.get(key));
+        }
+//        set();
+//        list();
+//        arrayTest();
+    }
+
+    private static void set() {
+        HashSet<Integer> set = new HashSet<>();
+        set.add(6);
+        set.add(7);
+        set.add(1);
+        set.add(8);
+        set.add(7);
+        System.out.println(set);
+        for (int n : set) {
+            System.out.println(n);
+        }
+    }
+
+    private static void list() {
         ArrayList<Integer> list = new ArrayList();
         list.add(5);
         list.add(3);
@@ -21,7 +48,6 @@ public class Tester {
         for (int score: scores) {
             System.out.println(score);
         }
-        //        arrayTest();
     }
 
     private static void arrayTest() {
