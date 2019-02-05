@@ -4,7 +4,7 @@ import java.time.Duration
 import java.time.LocalDateTime
 
 fun main() {
-    val enter: LocalDateTime = LocalDateTime.of(2018, 12,
+    val enter = LocalDateTime.of(2018, 12,
             25, 8, 0, 0)
     val leave = LocalDateTime.of(2018, 12, 25,
             10, 8, 0)
@@ -21,7 +21,5 @@ class Car(val id:String, val enter: LocalDateTime) {
             if (enter.isBefore(value))
                 field = value
         }
-    fun duration() =
-        Duration.between(enter, leave).toMinutes()
-
+    fun duration() = Duration.between(enter, leave).toMinutes()
 }
