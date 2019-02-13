@@ -9,5 +9,5 @@ fun main() {
     val w = emp.component3()
 //    var (name, age, weight) = Employee("Jack", 30, 80.5f)        //原本使用上面四行才能賦值，可用左側一行處理完成
 
-    println("$name $age")
+    println("$name $age $w")
 }
