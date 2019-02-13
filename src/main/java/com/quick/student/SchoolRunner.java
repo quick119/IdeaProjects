@@ -2,7 +2,7 @@ package com.quick.student;
 
 import java.util.Scanner;
 
-public class StudentRunner {
+public class SchoolRunner {
     public static void main(String[] args) {
 //        userInput();
         com.kotlin.Student.getPass();   //透過@JvmStatic可取得kotlin版的pass分數
