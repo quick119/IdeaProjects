@@ -1,6 +1,10 @@
 package com.quick
 
+import com.kotlin.Student
+
 fun main() {
+    val stu = Student("Hank", 50, 60)
+    stu.grading();
     var s:String? = "abcde"
     s = null
     println(s!!.length)
